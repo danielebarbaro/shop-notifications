@@ -1,12 +1,89 @@
-/node_modules
-/public/hot
-/public/storage
-/storage/*.key
-/vendor
+# Specific project files #
+##########################
+init.sh
+note.txt
+scripts/
+
+# Specific dummy folders and files #
+###################################
+/backups
+/db-dumps
+/dumps
+/supervisord
+/docker-dir
+
+# Laravel files #
+#################
 .env
 .env.backup
+.env.testing
 .phpunit.result.cache
 Homestead.json
 Homestead.yaml
 npm-debug.log
 yarn-error.log
+_ide_helper.php
+.phpstorm.meta.php
+/public/hot
+/public/storage
+/storage/api-docs
+/storage/*.key
+/storage/reports/*
+/public/storage/*
+/public/code-coverage/*
+laravel-echo-server.json
+laravel-echo-server.lock
+
+# Third party libraries and tools #
+###################################
+/vendor
+/node_modules
+/public/info.php
+/.gtm/
+
+# Editor generated files #
+##########################
+*.bak
+*.old
+*.tmp
+*.temp
+netbeans
+*.sublime-*
+.~*#
+nbproject
+.idea
+.vscode
+*.sass-cache
+*.diff
+*.err
+
+# OS generated files #
+######################
+.DS_Store
+ehthumbs.db
+Icon?
+Thumbs.db
+*.orig
+*.pyc
+*.rej
+*.sw?
+*.vi
+
+# Logs #
+########
+*.log
+
+# Packages #
+############
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
+
+# Dumps #
+#########
+*.sql
