@@ -3,6 +3,8 @@
 namespace App\Observers;
 
 use App\Models\Product;
+use App\Notifications\ProductUpdatedNotification;
+use Illuminate\Support\Facades\Notification;
 
 class ProductObserver
 {
@@ -25,7 +27,8 @@ class ProductObserver
      */
     public function updated(Product $product)
     {
-        //
+        $user = auth()->user();
+        Notification::send($user, new ProductUpdatedNotification($product));
     }
 
     /**

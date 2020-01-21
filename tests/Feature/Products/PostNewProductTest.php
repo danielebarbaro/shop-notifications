@@ -55,6 +55,7 @@ class PostNewProductTest extends TestCase
     public function testPostNewProductRequestNoBody()
     {
         $response = $this
+            ->actingAs($this->user, 'web')
             ->post('products', [
                 'price' => '6.6',
                 'name' => '',
@@ -72,6 +73,7 @@ class PostNewProductTest extends TestCase
     public function testPostNewProductRequestNoPrice()
     {
         $response = $this
+            ->actingAs($this->user, 'web')
             ->post('products', [
                 'price' => '',
                 'type' => Constant::PRODUCT_TYPE_1,
@@ -89,6 +91,7 @@ class PostNewProductTest extends TestCase
     public function testPostNewProductRequestNoType()
     {
         $response = $this
+            ->actingAs($this->user, 'web')
             ->post('products', [
                 'price' => '4.3',
                 'type' => '',

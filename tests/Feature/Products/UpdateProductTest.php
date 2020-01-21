@@ -28,7 +28,7 @@ class UpdateProductTest extends TestCase
     }
 
     /**
-     * Create a new product
+     * Update a product
      *
      * @return void
      */
@@ -56,6 +56,7 @@ class UpdateProductTest extends TestCase
     public function testPostNewProductRequestNoBody()
     {
         $response = $this
+            ->actingAs($this->user, 'web')
             ->put("products/{$this->product->id}", [
                 'price' => '6.16',
                 'name' => '',
@@ -73,6 +74,7 @@ class UpdateProductTest extends TestCase
     public function testPostNewProductRequestNoPrice()
     {
         $response = $this
+            ->actingAs($this->user, 'web')
             ->put("products/{$this->product->id}", [
                 'price' => '',
                 'type' => Constant::PRODUCT_TYPE_1,
@@ -90,6 +92,7 @@ class UpdateProductTest extends TestCase
     public function testPostNewProductRequestNoType()
     {
         $response = $this
+            ->actingAs($this->user, 'web')
             ->put("products/{$this->product->id}", [
                 'price' => '4.3',
                 'type' => '',
