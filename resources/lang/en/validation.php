@@ -118,6 +118,9 @@ return [
     'url' => 'The :attribute format is invalid.',
     'uuid' => 'The :attribute must be a valid UUID.',
 
+    'name' => 'Please add a valid name',
+    'price' => 'Please fill right price',
+
     /*
     |--------------------------------------------------------------------------
     | Custom Validation Language Lines

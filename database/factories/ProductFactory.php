@@ -9,7 +9,6 @@ use Faker\Generator as Faker;
 $factory->define(Product::class, function (Faker $faker) {
     return [
         'name' => $faker->word,
-        'description' => $faker->sentence(30),
         'type' => collect([
             Constant::PRODUCT_TYPE_0,
             Constant::PRODUCT_TYPE_1,
